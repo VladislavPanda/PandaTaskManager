@@ -7,6 +7,7 @@
     <script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <title>Добавить задачи</title>
@@ -14,53 +15,56 @@
 <body>
     <div class="container">
         <div class="panel panel-primary">
-          <div class="panel-heading">Schedule an Appointment</div>
+          <div class="panel-heading">Запланировать задачу</div>
             <div class="panel-body">
             <form action="handler.php" method="POST">
-               <div class="row">
-                
-                  <div class="col-md-6">
-                     <div class="form-group">
-                        <label class="control-label">First Name</label>
-                        <input type="text" class="form-control" name="fname" id="fname">
-                     </div>
-                  </div>
-                  <div class="col-md-6">
-                     <div class="form-group">
-                        <label class="control-label">Last Name</label>
-                        <input type="text" class="form-control" name="lname" id="lname">
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-md-6">
-                     <div class="form-group">
-                        <label class="control-label">Email</label>
-                        <input type="text" class="form-control" name="email" id="email">
-                     </div>
-                  </div>
-                  <div class='col-md-6'>
-                     <div class="form-group">
-                        <label class="control-label">Appointment Time</label>
-                        <div class='input-group date' id='datetimepicker1'>
-                           <input type='text' class="form-control" name="date_time"/>
-                           <span class="input-group-addon">
-                           <span class="glyphicon glyphicon-calendar"></span>
-                           </span>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Название задачи</label>
+                            <input type="text" class="form-control" name="taskName" id="taskName" required>
                         </div>
-                     </div>
-                  </div>
-              </div>
-              <input type="submit" class="btn btn-primary" value="Submit">
-              </form>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Описание задачи</label>
+                            <textarea class="form-control" name="taskDescription" id="taskDescription" cols="4" rows="6" style="resize: none;" required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class='col-md-6'>
+                        <div class="form-group">
+                            <label class="control-label">Дата и время задачи</label>
+                                <div class='input-group date' id='datetimepicker1'>
+                                <input type='text' class="form-control" name="dateTime"/>
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Напомнить мне о задаче за:</label>
+                            <!--<input type="text" class="form-control" name="remindTime" id="remindTime">-->
+                            <select name="remindTime" id="remindTime" class="form-control">
+                                <option value="15 minutes">15 минут</option> 
+                                <option value="30 minutes">30 минут</option>    
+                                <option value="1 hour">1 час</option>  
+                                <option value="1.5 hours">1.5 часа</option>
+                                <option value="2 hours">2 часа</option>
+                                <option value="3 hours">3 часа</option>
+                                <option value="4 hours">4 часа</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                </div>
+                <input type="submit" class="btn btn-primary" value="Сохранить">
+            </form>
             </div>
          </div>
-      </div>
-
-      <script>
-        $(function () {
-          $('#datetimepicker1').datetimepicker();
-       });
-      </script>
+    </div>
 </body>
 </html>
