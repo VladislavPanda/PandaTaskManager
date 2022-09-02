@@ -17,52 +17,51 @@
         <div class="panel panel-primary">
           <div class="panel-heading">Запланировать задачу</div>
             <div class="panel-body">
-            <form action="handler.php" method="POST">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="control-label">Название задачи</label>
-                            <input type="text" class="form-control" name="taskName" id="taskName" required>
+                <form action="handler.php" method="POST">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Название задачи</label>
+                                <input type="text" class="form-control" name="taskName" id="taskName" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="control-label">Описание задачи</label>
-                            <textarea class="form-control" name="taskDescription" id="taskDescription" cols="4" rows="6" style="resize: none;" required></textarea>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class='col-md-6'>
-                        <div class="form-group">
-                            <label class="control-label">Дата и время задачи</label>
-                                <div class='input-group date' id='datetimepicker1'>
-                                <input type='text' class="form-control" name="dateTime"/>
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Описание задачи</label>
+                                <textarea class="form-control" name="taskDescription" id="taskDescription" cols="4" rows="6" style="resize: none;" ></textarea>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="control-label">Напомнить мне о задаче за:</label>
-                            <!--<input type="text" class="form-control" name="remindTime" id="remindTime">-->
-                            <select name="remindTime" id="remindTime" class="form-control">
-                                <option value="15 minutes">15 минут</option> 
-                                <option value="30 minutes">30 минут</option>    
-                                <option value="1 hour">1 час</option>  
-                                <option value="1.5 hours">1.5 часа</option>
-                                <option value="2 hours">2 часа</option>
-                                <option value="3 hours">3 часа</option>
-                                <option value="4 hours">4 часа</option>
-                            </select>
+                    <div class="row">
+                        <div class='col-md-6'>
+                            <div class="form-group">
+                                <label class="control-label">Дата и время задачи</label>
+                                    <div class='input-group date' id='datetimepicker1'>
+                                    <input type='text' class="form-control" name="dateTime"/>
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Напомнить мне о задаче за:</label>
+                                <!--<input type="text" class="form-control" name="remindTime" id="remindTime">-->
+                                <select name="remindTime" id="remindTime" class="form-control">
+                                    <option value="15 minutes">15 минут</option> 
+                                    <option value="30 minutes">30 минут</option>    
+                                    <option value="1 hour">1 час</option>  
+                                    <option value="1.5 hours">1.5 часа</option>
+                                    <option value="2 hours">2 часа</option>
+                                    <option value="3 hours">3 часа</option>
+                                    <option value="4 hours">4 часа</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                    
-                </div>
-                <input type="submit" class="btn btn-primary" value="Сохранить">
-            </form>
+                    <input type="submit" class="btn btn-primary" value="Сохранить">
+                </form>
             </div>
          </div>
     </div>
